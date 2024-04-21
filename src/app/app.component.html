@@ -1,0 +1,34 @@
+<div class="main-body">
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/">
+    <img src="assets/img/logo-savjee.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    &nbsp;Tcoin
+    </a>
+
+  <div>
+      <button routerLink="/new/transaction/pending" class="btn btn-outline-light" *ngIf="thereArePendingTransactions()">
+        Giao dịch đang chờ xử lý
+        <span class="badge badge-light">{{blockchain.pendingTransactions.length}}</span>
+      </button>
+      &nbsp;
+      <button routerLink="/settings" class="btn btn-outline-light">
+        Cài đặt
+      </button>
+      &nbsp;
+      <button routerLink="/new/transaction" class="btn btn-outline-light">
+        Tạo giao dịch
+      </button>
+    </div>
+  </nav>
+
+  <br>
+
+  
+
+  <router-outlet></router-outlet>
+
+  <footer class="text-muted text-center" style="margin-top: 150px;">
+    <small>Đây không phải là sản phẩm hoàn thiện. Chỉ dùng duy nhất cho mục đích giáo dục<br>
+    <a href="https://github.com/Savjee/savjeecoin-frontend" target="_blank">Source code</a></small>
+  </footer>
+</div>

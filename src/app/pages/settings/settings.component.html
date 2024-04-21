@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Cài đặt</h1>
+  <p>
+    Kiểm soát cách hoạt động của blockchain khi các giao dịch hoặc khối mới được tạo. Các thay đổi được lưu tự động.  </p>
+
+  <br>
+
+  <div class="form-group">
+    <label for="difficulty">Difficulty</label>
+    <input type="number" class="form-control" id="difficulty" aria-describedby="difficultyHelp" [(ngModel)]="blockchain.difficulty">
+    <small id="difficultyHelp" class="form-text text-muted">
+     Tạo độ khó việc kiểm soát quá trình khai thác. Con số càng cao sẽ khiến việc khai thác càng chậm!
+          	<br>Mặc định: 2
+    </small>
+  </div>
+
+  <br>
+
+  <div class="form-group">
+    <label for="miningReward">Phần thưởng</label>
+    <input type="number" class="form-control" id="miningReward" aria-describedby="miningRewardHelp" [(ngModel)]="blockchain.miningReward">
+    <small id="miningRewardHelp" class="form-text text-muted">
+      Số lượng coin mà người khai thác nhận được khi tạo thành công khối mới cho chuỗi.
+      		<br>Mặc định: 100
+    </small>
+  </div>
+
+</div>
